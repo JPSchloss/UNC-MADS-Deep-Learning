@@ -14616,7 +14616,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Very-Simple-Linear-Regression-Example">Very Simple Linear Regression Example<a class="anchor-link" href="#Very-Simple-Linear-Regression-Example">&#182;</a></h2>
+<h2 id="Simple-Linear-Regression-Example">Simple Linear Regression Example<a class="anchor-link" href="#Simple-Linear-Regression-Example">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Import-Necessary-Libraries">Import Necessary Libraries<a class="anchor-link" href="#Import-Necessary-Libraries">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14625,11 +14636,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import necessary libraries</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 </pre></div>
@@ -14639,39 +14649,28 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Generate-Simple-Dataset">Generate Simple Dataset<a class="anchor-link" href="#Generate-Simple-Dataset">&#182;</a></h4><p>In this example, X represents the feature variable of "area in square feet" and y represents the target variable of "price in $1000s".</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step 1: Generate a simple dataset</span>
-<span class="c1"># X represents the feature (e.g., area in square feet), y represents the target (e.g., price in $1000s)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1200</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Feature: house area</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1200</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Feature: house area</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>  <span class="c1"># Target: house price in $1000s</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step 2: Fit a simple linear regression model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="c1"># Step 3: Make predictions for the same data</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14684,11 +14683,164 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Step 4: Display coefficients and visualize the data and the regression line</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Intercept: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([[500],
+       [600],
+       [700],
+       [800],
+       [900]])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([50, 60, 65, 70, 75])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Fit-The-Model-And-Make-Predictions">Fit The Model And Make Predictions<a class="anchor-link" href="#Fit-The-Model-And-Make-Predictions">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([50.41666667, 57.44047619, 64.46428571, 71.48809524, 78.51190476])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Display-The-Coefficients-And-Visualize-The-Regression-Line">Display The Coefficients And Visualize The Regression Line<a class="anchor-link" href="#Display-The-Coefficients-And-Visualize-The-Regression-Line">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Intercept: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Coefficient (slope): </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -14754,7 +14906,105 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Modern-Approach-vs.-By-Hand">Modern Approach vs. By Hand<a class="anchor-link" href="#Modern-Approach-vs.-By-Hand">&#182;</a></h2>
+<h2 id="Deeper-Dive-Into-Linear-Regression">Deeper Dive Into Linear Regression<a class="anchor-link" href="#Deeper-Dive-Into-Linear-Regression">&#182;</a></h2><p>Linear regression is a foundational supervised learning algorithm used to model the relationship between a continuous dependent variable $y$ and one or more independent variables (features) $X$. At its simplest, with a single feature, it seeks to find a straight line that best fits the observed data points.</p>
+<h3 id="The-Linear-Regression-Equation">The Linear Regression Equation<a class="anchor-link" href="#The-Linear-Regression-Equation">&#182;</a></h3><p>The equation for the regression line is:</p>
+$$
+\hat{y} = \theta_0 + \theta_1 X
+$$<ul>
+<li>$X$: the input feature (independent variable).  </li>
+<li>$\hat{y}$: the predicted output (dependent variable).  </li>
+<li>$\theta_0$: the <strong>intercept</strong>, representing the value of $\hat{y}$ when $X = 0$.  </li>
+<li>$\theta_1$: the <strong>slope</strong>, indicating how much $\hat{y}$ changes for a one-unit change in $X$.  </li>
+</ul>
+<p>Together, $(\theta_0, \theta_1)$ are the <strong>parameters</strong> the model must learn from the training data.</p>
+<h3 id="The-Cost-Function">The Cost Function<a class="anchor-link" href="#The-Cost-Function">&#182;</a></h3><p>To measure how well a particular choice of parameters fits the data, we define a <strong>cost function</strong> that quantifies the aggregate error across all training examples.</p>
+<p>A common choice is the Mean Squared Error (MSE):</p>
+$$
+J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \bigl(\hat{y}_i - y_i\bigr)^2
+$$<ul>
+<li>$m$: total number of training examples.  </li>
+<li>$\hat{y}_i = \theta_0 + \theta_1 X_i$: model’s prediction for example $i$.  </li>
+<li>$y_i$: true target value for example $i$.  </li>
+<li>The factor $\tfrac{1}{2m}$ simplifies the derivative expressions (the “2” cancels when taking gradients).</li>
+</ul>
+<p>By minimizing $J(\theta)$, we find the parameters that yield the smallest average squared difference between predictions and actual values.</p>
+<h3 id="Gradient-Descent-Introduction">Gradient Descent Introduction<a class="anchor-link" href="#Gradient-Descent-Introduction">&#182;</a></h3><p>Gradient descent is an iterative optimization algorithm used to find the parameter values that minimize the cost function. The idea is to start with an initial guess for $\theta$, then repeatedly adjust it in the direction of steepest descent (negative gradient).</p>
+<p>For each parameter $\theta_j$ (where $j = 0$ or $1$), we apply <strong>the update rule</strong>:</p>
+$$
+\theta_j := \theta_j - \alpha \,\frac{\partial J(\theta)}{\partial \theta_j}
+$$<ul>
+<li>$\alpha$: <strong>learning rate</strong>, a positive scalar that controls the step size of each update.  </li>
+<li>$\frac{\partial J(\theta)}{\partial \theta_j}$: partial derivative of the cost with respect to $\theta_j$, which tells us the slope of $J$ in parameter space.</li>
+</ul>
+<p>For simple linear regression, the partial derivatives are:</p>
+$$
+\frac{\partial J(\theta)}{\partial \theta_0}
+= \frac{1}{m}\sum_{i=1}^{m} (\hat{y}_i - y_i)
+\quad\text{and}\quad
+\frac{\partial J(\theta)}{\partial \theta_1}
+= \frac{1}{m}\sum_{i=1}^{m} (\hat{y}_i - y_i)\,X_i.
+$$<p>Substituting these into the update rule yields:</p>
+$$
+\theta_0 := \theta_0 - \alpha \frac{1}{m}\sum_{i=1}^{m} (\hat{y}_i - y_i),
+$$$$
+\theta_1 := \theta_1 - \alpha \frac{1}{m}\sum_{i=1}^{m} (\hat{y}_i - y_i)\,X_i.
+$$<p><strong>These expressions are used on each iteration until convergence.</strong></p>
+<h3 id="Gradient-Descent-in-Plain-Language">Gradient Descent in Plain Language<a class="anchor-link" href="#Gradient-Descent-in-Plain-Language">&#182;</a></h3><ol>
+<li><p><strong>Pick a Starting Point</strong><br>
+Begin with some initial settings for your model. These are usually chosen at random or set to simple default values.</p>
+</li>
+<li><p><strong>See How You’re Doing</strong><br>
+Using your current settings, measure how far off your model’s predictions are from the actual results. This gives you a sense of whether you’re doing well or need to improve.</p>
+</li>
+<li><p><strong>Find Which Way to Move</strong><br>
+Determine which direction would improve your performance. You do this by checking whether a small tweak in each setting makes the performance better or worse.</p>
+</li>
+<li><p><strong>Make a Small Adjustment</strong><br>
+Once you know which way improves your model, you adjust each setting a little bit in that direction. The size of these tweaks is controlled so you don’t overdo it.</p>
+</li>
+<li><p><strong>Repeat Until Improvement Stops</strong><br>
+You keep measuring performance, finding the best direction, and making small adjustments over and over. Eventually, the improvements become very small and you stop the process.</p>
+</li>
+</ol>
+<h3 id="Practical-Considerations">Practical Considerations<a class="anchor-link" href="#Practical-Considerations">&#182;</a></h3><ol>
+<li><p><strong>Choosing the Learning Rate ($\alpha$):</strong></p>
+<ul>
+<li>Too small: convergence is slow.  </li>
+<li>Too large: may overshoot the minimum or diverge.</li>
+</ul>
+</li>
+<li><p><strong>Feature Scaling:</strong><br>
+When $X$ has large or disparate values, scaling (e.g., standardization or normalization) can accelerate convergence.</p>
+</li>
+<li><p><strong>Stopping Criteria:</strong></p>
+<ul>
+<li>Maximum number of iterations.  </li>
+<li>Change in cost function below a threshold.  </li>
+</ul>
+</li>
+<li><p><strong>Interpretation of Parameters:</strong></p>
+<ul>
+<li>Once training is complete, $\theta_1$ indicates the strength and direction of the relationship:  <ul>
+<li>Positive $\theta_1$: as $X$ increases, $y$ tends to increase.  </li>
+<li>Negative $\theta_1$: as $X$ increases, $y$ tends to decrease.  </li>
+</ul>
+</li>
+<li>$\theta_0$ gives the baseline prediction when all features are zero.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Linear-Regression:-Modern-Approach-vs.-From-Scratch">Linear Regression: Modern Approach vs. From Scratch<a class="anchor-link" href="#Linear-Regression:-Modern-Approach-vs.-From-Scratch">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14774,7 +15024,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14845,13 +15095,18 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_squared_log_error</span><span class="p">,</span>
+    <span class="n">r2_score</span><span class="p">,</span> <span class="n">explained_variance_score</span><span class="p">,</span> <span class="n">max_error</span><span class="p">,</span> <span class="n">median_absolute_error</span>
+<span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14864,7 +15119,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize and train the model</span>
@@ -14913,7 +15168,7 @@ Slope (theta_1): 2.9369350214020384
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make predictions</span>
@@ -14957,7 +15212,7 @@ Slope (theta_1): 2.9369350214020384
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot the results</span>
@@ -15008,16 +15263,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_squared_log_error</span><span class="p">,</span>
-    <span class="n">r2_score</span><span class="p">,</span> <span class="n">explained_variance_score</span><span class="p">,</span> <span class="n">max_error</span><span class="p">,</span> <span class="n">median_absolute_error</span>
-<span class="p">)</span>
-
-<span class="c1"># Compute metrics</span>
-<span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"Mean Absolute Error (MAE)"</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
     <span class="s2">"Mean Squared Error (MSE)"</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
     <span class="s2">"Root Mean Squared Error (RMSE)"</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
@@ -15028,7 +15277,6 @@ class="
     <span class="s2">"Median Absolute Error"</span><span class="p">:</span> <span class="n">median_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
 <span class="p">}</span>
 
-<span class="c1"># Print metrics</span>
 <span class="k">for</span> <span class="n">metric</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metrics</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
@@ -15086,44 +15334,6 @@ Median Absolute Error: 1.6093
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Linear regression models the relationship between an independent variable $ X $ and a dependent variable $ y $.</p>
-<p>The equation for the regression line is:</p>
-$$
-\hat{y} = \theta_0 + \theta_1 X
-$$<p>Where:</p>
-<ul>
-<li>$ \hat{y} $ is the predicted value.</li>
-<li>$ \theta_0 $ (intercept) and $ \theta_1 $ (slope) are the parameters to learn.</li>
-</ul>
-<p>The goal is to minimize the <strong>cost function</strong>, the Mean Squared Error (MSE):</p>
-$$
-J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( \hat{y}_i - y_i \right)^2
-$$<p>Here:</p>
-<ul>
-<li>$ m $ is the number of training examples.</li>
-<li>$ \hat{y}_i $ is the predicted value for the $ i^{th} $ example.</li>
-<li>$ y_i $ is the actual value for the $ i^{th} $ example.</li>
-</ul>
-<p><strong>Gradient descent</strong> is used to minimize this cost function by iteratively updating the parameters $ \theta $. The update rule for parameter $ \theta_j $ is:</p>
-$$
-\theta_j := \theta_j - \alpha \frac{\partial J(\theta)}{\partial \theta_j}
-$$<p>Where:</p>
-<ul>
-<li>$ \alpha $ is the learning rate (controls the step size for updates).</li>
-<li>$ \frac{\partial J(\theta)}{\partial \theta_j} $ is the partial derivative of the cost function with respect to $ \theta_j $.</li>
-</ul>
-<p><strong>This iterative process adjusts $ \theta $ to find the values that minimize the cost function, resulting in the best-fit line for the data.</strong></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Initialize-Parameters">Initialize Parameters<a class="anchor-link" href="#Initialize-Parameters">&#182;</a></h4>
 </div>
 </div>
@@ -15133,7 +15343,7 @@ $$<p>Where:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Random initial weights (theta)</span>
@@ -15145,26 +15355,15 @@ $$<p>Where:</p>
 </div>
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Compute-The-Prediction-And-Loss">Compute The Prediction And Loss<a class="anchor-link" href="#Compute-The-Prediction-And-Loss">&#182;</a></h4>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add x0 = 1 to each instance for the intercept term</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add x0 = 1 to each instance for the intercept term to make sure the by-hand process works correctly. </span>
 <span class="n">X_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">num_points</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">X</span><span class="p">]</span>
 </pre></div>
 
@@ -15173,12 +15372,27 @@ $$<p>Where:</p>
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Create-Prediction-Function">Create Prediction Function<a class="anchor-link" href="#Create-Prediction-Function">&#182;</a></h4><p>$
+ \hat{y} = X \cdot \theta
+ $</p>
+<p>Here, $ X $ includes a column of ones for the intercept ($ \theta_0 $).</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
@@ -15186,8 +15400,42 @@ $$<p>Where:</p>
 <span class="sd">    Predicts y values based on current theta values.</span>
 <span class="sd">    """</span>
     <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">compute_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Create-Compute-Loss-Function">Create Compute Loss Function<a class="anchor-link" href="#Create-Compute-Loss-Function">&#182;</a></h4><p>$
+ J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( \hat{y}_i - y_i \right)^2
+ $</p>
+<p>Where:</p>
+<ul>
+<li>$ m $ is the number of training examples.</li>
+<li>$ \hat{y}_i $ is the predicted value for the $ i^{th} $ example.</li>
+<li>$ y_i $ is the actual value for the $ i^{th} $ example.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compute_loss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Computes Mean Squared Error (MSE) Loss.</span>
 <span class="sd">    """</span>
@@ -15207,33 +15455,19 @@ $$<p>Where:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Predictions</strong>:</p>
-<p>$
- \hat{y} = X \cdot \theta
- $</p>
-<p>Here, $ X $ includes a column of ones for the intercept ($ \theta_0 $).</p>
-<p><strong>Loss</strong>:</p>
-<p>$
- J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( \hat{y}_i - y_i \right)^2
- $</p>
+<h4 id="Computing-The-Gradient">Computing The Gradient<a class="anchor-link" href="#Computing-The-Gradient">&#182;</a></h4><p>$
+\frac{\partial J(\theta)}{\partial \theta_j} = -\frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i) x_{ij}
+$</p>
 <p>Where:</p>
 <ul>
+<li>$ J(\theta) $ is the cost function.</li>
 <li>$ m $ is the number of training examples.</li>
-<li>$ \hat{y}_i $ is the predicted value for the $ i^{th} $ example.</li>
 <li>$ y_i $ is the actual value for the $ i^{th} $ example.</li>
+<li>$ \hat{y}_i $ is the predicted value for the $ i^{th} $ example.</li>
+<li>$ x_{ij} $ is the value of the $ j^{th} $ feature for the $ i^{th} $ training example.</li>
 </ul>
+<p>The gradient measures how much $ J(\theta) $ changes with respect to $ \theta_j $. It is used to adjust $ \theta_j $ during gradient descent to minimize the cost function.</p>
 
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Computing-The-Gradient">Computing The Gradient<a class="anchor-link" href="#Computing-The-Gradient">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15242,7 +15476,7 @@ $$<p>Where:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compute_gradient</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
@@ -15265,31 +15499,17 @@ $$<p>Where:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Gradient for $ \theta_j $</strong>:</p>
+<h4 id="Training-The-Model-Using-Gradient-Descent">Training The Model Using Gradient Descent<a class="anchor-link" href="#Training-The-Model-Using-Gradient-Descent">&#182;</a></h4><p>This process uses the <strong>update rule</strong> to update the model parameters:</p>
 <p>$
-\frac{\partial J(\theta)}{\partial \theta_j} = -\frac{1}{m} \sum_{i=1}^{m} (y_i - \hat{y}_i) x_{ij}
+\theta := \theta - \alpha \cdot \frac{\partial J(\theta)}{\partial \theta}
 $</p>
 <p>Where:</p>
 <ul>
-<li>$ J(\theta) $ is the cost function.</li>
-<li>$ m $ is the number of training examples.</li>
-<li>$ y_i $ is the actual value for the $ i^{th} $ example.</li>
-<li>$ \hat{y}_i $ is the predicted value for the $ i^{th} $ example.</li>
-<li>$ x_{ij} $ is the value of the $ j^{th} $ feature for the $ i^{th} $ training example.</li>
+<li>$ \alpha $ is the learning rate.</li>
+<li>$ \frac{\partial J(\theta)}{\partial \theta} $ is the gradient of the cost function with respect to $ \theta $.</li>
 </ul>
-<p>The gradient measures how much $ J(\theta) $ changes with respect to $ \theta_j $. It is used to adjust $ \theta_j $ during gradient descent to minimize the cost function.</p>
+<p>This process stops when the change in the loss is below a tolerance ($ \text{tol} $) or after a fixed number of iterations.</p>
 
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Training-The-Model-Using-Gradient-Descent">Training The Model Using Gradient Descent<a class="anchor-link" href="#Training-The-Model-Using-Gradient-Descent">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15298,7 +15518,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gradient_descent</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">learning_rate</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
@@ -15318,7 +15538,7 @@ $</p>
         <span class="c1"># Compute the gradient</span>
         <span class="n">gradients</span> <span class="o">=</span> <span class="n">compute_gradient</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
-        <span class="c1"># Update theta</span>
+        <span class="c1"># Update theta using parameter update rule</span>
         <span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">gradients</span>
 
         <span class="c1"># Check for convergence</span>
@@ -15344,27 +15564,6 @@ $</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Parameter update rule</strong>:</p>
-<p>$
-\theta := \theta - \alpha \cdot \frac{\partial J(\theta)}{\partial \theta}
-$</p>
-<p>Where:</p>
-<ul>
-<li>$ \alpha $ is the learning rate.</li>
-<li>$ \frac{\partial J(\theta)}{\partial \theta} $ is the gradient of the cost function with respect to $ \theta $.</li>
-</ul>
-<p>Stop when the change in loss is below a tolerance ($ \text{tol} $) or after a fixed number of iterations.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Plotting-The-Loss">Plotting The Loss<a class="anchor-link" href="#Plotting-The-Loss">&#182;</a></h4>
 </div>
 </div>
@@ -15374,7 +15573,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot the loss over iterations</span>
@@ -15425,6 +15624,61 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Making-Predictions">Making Predictions<a class="anchor-link" href="#Making-Predictions">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make predictions</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">X_b</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Calculate Mean Squared Error</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Mean Squared Error: </span><span class="si">{</span><span class="n">mse</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Mean Squared Error: 3.9698119948362076
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Plotting-The-Regression-Line">Plotting The Regression Line<a class="anchor-link" href="#Plotting-The-Regression-Line">&#182;</a></h4>
 </div>
 </div>
@@ -15434,12 +15688,12 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot the regression line</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Data'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">predict</span><span class="p">(</span><span class="n">X_b</span><span class="p">,</span> <span class="n">theta</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Regression Line'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Regression Line'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'X'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Regression Line vs Data'</span><span class="p">)</span>
@@ -15474,6 +15728,75 @@ class="
 >
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Metrics-For-Comparison">Metrics For Comparison<a class="anchor-link" href="#Metrics-For-Comparison">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Mean Absolute Error (MAE)"</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="s2">"Mean Squared Error (MSE)"</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="s2">"Root Mean Squared Error (RMSE)"</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="s2">"Mean Squared Logarithmic Error (MSLE)"</span><span class="p">:</span> <span class="n">mean_squared_log_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">,</span> <span class="kc">None</span><span class="p">)),</span>  <span class="c1"># Clip to avoid log(0)</span>
+    <span class="s2">"R² Score"</span><span class="p">:</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="s2">"Explained Variance Score"</span><span class="p">:</span> <span class="n">explained_variance_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="s2">"Max Error"</span><span class="p">:</span> <span class="n">max_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+    <span class="s2">"Median Absolute Error"</span><span class="p">:</span> <span class="n">median_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">metric</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metrics</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Mean Absolute Error (MAE): 1.6987
+Mean Squared Error (MSE): 3.9698
+Root Mean Squared Error (RMSE): 1.9924
+Mean Squared Logarithmic Error (MSLE): 0.0764
+R² Score: 0.4194
+Explained Variance Score: 0.4194
+Max Error: 4.3560
+Median Absolute Error: 1.6021
+</pre>
+</div>
 </div>
 
 </div>
@@ -15909,16 +16232,26 @@ Here:<ul>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Import-necessary-libraries">Import necessary libraries<a class="anchor-link" href="#Import-necessary-libraries">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import necessary libraries</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -15932,16 +16265,26 @@ Here:<ul>
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Load-The-Dataset">Load The Dataset<a class="anchor-link" href="#Load-The-Dataset">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the dataset from a CSV file (replace the path with your dataset location)</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">'Kaggle_Housing_Data.csv'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">'Kaggle_Housing_Data.csv'</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 
@@ -15955,11 +16298,10 @@ Here:<ul>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the first few rows of the dataset</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15977,7 +16319,7 @@ Here:<ul>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
 
 
@@ -16107,18 +16449,27 @@ Here:<ul>
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Check-Correlations">Check Correlations<a class="anchor-link" href="#Check-Correlations">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the correlation between Variable1 and Variable2</span>
-<span class="n">correlation</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'area'</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'stories'</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correlation</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'area'</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'stories'</span><span class="p">])</span>
 
-<span class="c1"># Display the correlation</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Correlation between Variable1 and Variable2: </span><span class="si">{</span><span class="n">correlation</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
@@ -16150,12 +16501,23 @@ Here:<ul>
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Use-A-Correlation-Matrix">Use A Correlation Matrix<a class="anchor-link" href="#Use-A-Correlation-Matrix">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute the correlation matrix</span>
@@ -16193,7 +16555,7 @@ Here:<ul>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/var/folders/fm/zbjt5b095lx6_6skdjzm23xr0000gn/T/ipykernel_64629/559908563.py:2: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
+<pre>/var/folders/fm/zbjt5b095lx6_6skdjzm23xr0000gn/T/ipykernel_83235/559908563.py:2: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
   correlation_matrix = df.corr()
 </pre>
 </div>
@@ -16220,12 +16582,23 @@ class="
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Prepare-The-Data">Prepare The Data<a class="anchor-link" href="#Prepare-The-Data">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the columns in the dataset</span>
@@ -16268,7 +16641,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert categorical columns to numerical values (if needed)</span>
@@ -16287,12 +16660,23 @@ class="
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Set-Up-Your-X-and-y-Datasets">Set Up Your X and y Datasets<a class="anchor-link" href="#Set-Up-Your-X-and-y-Datasets">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Features (X) and Target (y)</span>
@@ -16312,7 +16696,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train/Test Split</span>
@@ -16324,12 +16708,23 @@ class="
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Initialize-The-Model-And-Make-Predictions">Initialize The Model And Make Predictions<a class="anchor-link" href="#Initialize-The-Model-And-Make-Predictions">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize and Train the Linear Regression Model</span>
@@ -16374,12 +16769,23 @@ Coefficients: [2.35848772e+02 7.85744924e+04 1.09711727e+06 4.06223164e+05
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Calculate-Model-Performance">Calculate Model Performance<a class="anchor-link" href="#Calculate-Model-Performance">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate Model Performance</span>
@@ -16395,30 +16801,17 @@ Coefficients: [2.35848772e+02 7.85744924e+04 1.09711727e+06 4.06223164e+05
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Mean Squared Error: 1771751116594.034
-R^2 Score: 0.6494754192267806
-</pre>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Example-Prediction-With-New-Input">Example Prediction With New Input<a class="anchor-link" href="#Example-Prediction-With-New-Input">&#182;</a></h4>
 </div>
 </div>
-
 </div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16427,9 +16820,7 @@ R^2 Score: 0.6494754192267806
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example of predicting house prices based on new input</span>
-
-<span class="c1"># Example new house data: area=3000, 3 bedrooms, 2 bathrooms, 2 stories, mainroad=yes, guestroom=no, etc.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example new house data: area=3000, 3 bedrooms, 2 bathrooms, 2 stories, mainroad=yes, guestroom=no, etc.</span>
 
 <span class="n">new_house</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 <span class="n">predicted_price</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_house</span><span class="p">)</span>
