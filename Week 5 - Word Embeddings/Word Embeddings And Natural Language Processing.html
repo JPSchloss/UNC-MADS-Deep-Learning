@@ -14628,8 +14628,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li>"The cat sat on the mat."  </li>
 <li>"The dog sat on the mat."  </li>
 </ul>
-<p>The vocabulary from these sentences is: <code>['The', 'cat', 'dog', 'sat', 'on', 'mat']</code>. 
-The first sentence can be represented as a vector: <code>[1, 1, 0, 1, 1, 1]</code>, where each entry corresponds to the count of a word from the vocabulary.</p>
+<p>The vocabulary from these sentences is: <code>['the', 'cat', 'dog', 'sat', 'on', 'mat']</code>. 
+The first sentence can be represented as a vector: <code>[2, 1, 0, 1, 1, 1]</code>, where each entry corresponds to the count of a word from the vocabulary.</p>
 <p>While BoW is easy to implement, it has limitations. Primarily, it ignores word order and the context in which words appear.</p>
 
 </div>
@@ -15180,7 +15180,7 @@ $$<p></p>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span><span class="n">sentences</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="c1"># Train Word2Vec model - CBOW Model</span>
-<span class="c1">#model = Word2Vec(sentences=corpus, vector_size=50, window=1, min_count=1, sg=1, epochs=100)</span>
+<span class="c1">#model = Word2Vec(sentences=corpus, vector_size=50, window=1, min_count=1, sg=0, epochs=100)</span>
 
 <span class="c1"># Save the trained model</span>
 <span class="c1"># model.save("word2vec.model")</span>
